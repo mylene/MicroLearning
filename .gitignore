@@ -2,6 +2,7 @@
 
 # Created by https://www.gitignore.io/api/git,java,linux,maven,windows,intellij+all
 # Edit at https://www.gitignore.io/?templates=git,java,linux,maven,windows,intellij+all
+# Added jekyll (bottom of file)
 
 ### Git ###
 # Created by git for backups. To disable backups in Git:
@@ -183,3 +184,14 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/git,java,linux,maven,windows,intellij+all
+
+# Created by https://www.gitignore.io/api/jekyll
+# Edit at https://www.gitignore.io/?templates=jekyll
+
+### Jekyll ###
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# End of https://www.gitignore.io/api/jekyll
