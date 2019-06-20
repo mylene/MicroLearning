@@ -5,14 +5,14 @@ jdk:
 
 sudo: false # faster builds
 
-#addons:
-#  sonarcloud:
-#    organization: "mylene-github" # the key of the org you chose at step #3
-#    token:
-#      secure: "L+MaADZwgQqH0kl5RNLh7hm15RVJ27abZqZ/6fquIHqr/IbnhqByFqkNNaqf4s/TIUWu7K3yNzA32fI4aoWQJr0Ti0/n5t3wO73Y+7y/Q8x93aUODSEV4/NoVEM18WVFM1XZWM7y03mQxG4RCTHZtJuCfdum+PgmU6xumlM8tEsJH7I8D/oUnq13GFAKkjCxzsI2JGo3BHTmoWjTs4T0UVcvzrAPHXbcdiS4MKScVBcbwQf2B9WrTyEQJ9RrZ/MZLyzr4vPIttUD1h/6ybPHaRRVL8cooy0tuKo4/dEVPeTe/j3237sXYZf6hxTETR2ikkIwJ4Yx2//mgHwgNgibAcEzjRWCSgIztp4BfanMOH2rCsys/imu6s7u+FC1CiQgDxhYWsMksg9Ns0OLp+aNdKIarGemlMCFAVpiSNYf82IBvciFPDIXk+gnTIidn3CR8lSa3h7kQTcaHTAyPU4CX6tfzed2GtqyWJupyB/31EZjeAsKNhWK5QVFr3xHHCxzfRpfu7Sxir+RJXS168YM8YxmbIQyz07VPONk6k7zhBj53ao5YKOnHum/b/JyfNXIHXo8U+mPXtSfY8w9Pc3UBTdBSwTWUbcREmkz1R9vjrXLnwDVfiJ9pN6D7Mle/ZEA7iA5RKhrYrPRRmwLOxMU6+TtQ2qSNZynKf0kzXPLZpc="
-#script:
-#  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-#  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
-#
+addons:
+  sonarcloud:
+    organization: "mylene-github" # the key of the org you chose at step #3
+    token:
+      secure: "L+MaADZwgQqH0kl5RNLh7hm15RVJ27abZqZ/6fquIHqr/IbnhqByFqkNNaqf4s/TIUWu7K3yNzA32fI4aoWQJr0Ti0/n5t3wO73Y+7y/Q8x93aUODSEV4/NoVEM18WVFM1XZWM7y03mQxG4RCTHZtJuCfdum+PgmU6xumlM8tEsJH7I8D/oUnq13GFAKkjCxzsI2JGo3BHTmoWjTs4T0UVcvzrAPHXbcdiS4MKScVBcbwQf2B9WrTyEQJ9RrZ/MZLyzr4vPIttUD1h/6ybPHaRRVL8cooy0tuKo4/dEVPeTe/j3237sXYZf6hxTETR2ikkIwJ4Yx2//mgHwgNgibAcEzjRWCSgIztp4BfanMOH2rCsys/imu6s7u+FC1CiQgDxhYWsMksg9Ns0OLp+aNdKIarGemlMCFAVpiSNYf82IBvciFPDIXk+gnTIidn3CR8lSa3h7kQTcaHTAyPU4CX6tfzed2GtqyWJupyB/31EZjeAsKNhWK5QVFr3xHHCxzfRpfu7Sxir+RJXS168YM8YxmbIQyz07VPONk6k7zhBj53ao5YKOnHum/b/JyfNXIHXo8U+mPXtSfY8w9Pc3UBTdBSwTWUbcREmkz1R9vjrXLnwDVfiJ9pN6D7Mle/ZEA7iA5RKhrYrPRRmwLOxMU6+TtQ2qSNZynKf0kzXPLZpc="
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
+
 #after_success:
 #  - bash <(curl -s https://codecov.io/bash)
