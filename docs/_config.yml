@@ -1,12 +1,3 @@
+title: MicroLearning
+description: An application that sends you one page per day about something you want to learn. This could be a random page from Wikipedia, a page of React documentation, a Kanji character, or a page from the CIA World Factbook.
 theme: jekyll-theme-cayman
-name: MicroLearning
-plugins:
-  - jekyll-feed
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-avatar
-  - jemoji
-  - jekyll-mentions
-  - jekyll-include-cache
-

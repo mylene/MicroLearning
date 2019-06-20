@@ -1,6 +1,5 @@
 ---
-title: MicroLearning
-layout: post
+layout: default
 ---
 
 Placeholder page 1
