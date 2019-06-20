@@ -52,11 +52,16 @@ onderwerpen waaruit gekozen kan worden, of die kunnen leiden tot eigen ideeën.
 * Onthouden wat getoond
 * Wat sla je op? Pagina of link?
 * Automatisch x nieuwe items ophalen
+* ...
 
 ## "organisatie" en overig
 * Ondersteunend aan bovenstaand
 * API
 * Slack chatbot
+* ...
+
+## ...
+* ...
 
 
 Alles op de backend graag via microservices, Java 12, Maven, Modulair en BDD/TDD.
