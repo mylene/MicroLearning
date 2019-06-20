@@ -17,11 +17,11 @@ Sinds lang stond Jekyll op mijn "tools to try" lijst, omdat ik er ooit mee had p
    pagina kan markdown of html zijn, naar eigen voorkeur.    
    hij moet wel beginnen met de "front matter"
  
- ```scss
- ---
- layout: default
- ---
- ```
+```scss
+---
+layout: default
+---
+```
  
  * Als je de pagina dan add, commit en pusht, zul je de gegenereerde site zien.
  
