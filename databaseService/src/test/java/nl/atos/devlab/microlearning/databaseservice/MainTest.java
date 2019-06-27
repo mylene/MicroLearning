@@ -58,6 +58,13 @@ public class MainTest {
         Assertions.assertEquals("Hello Joe!", jsonObject.getString("message"),
                 "hello Joe message");
 
+        jsonObject = client
+                .target(getConnectionString("/greet/MagicPatje"))
+                .request()
+                .get(JsonObject.class);
+        Assertions.assertEquals("Hello MagicPatje!", jsonObject.getString("message"),
+                "hello MagicPatje message");
+
         Response r = client
                 .target(getConnectionString("/greet/greeting"))
                 .request()
