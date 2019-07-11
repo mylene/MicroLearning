@@ -11,5 +11,6 @@ Daarom is het wel belangrijk dat iedereen weet wat de leerdoelen zijn van de ver
 **Mylène** houdt zich in elk geval bezig met algemene coördinatie, reviews en het opzetten van het geheel.    
 Ze zal ook zoveel mogelijk proberen de "gaten" te dichten om een werkend systeem te krijgen.   
 **Dominique** wil zich verdiepen in GCP, en ondersteunt en vervangt Mylène in haar coördinerende rol.
-
+**Patricia** wil verder met Angular, en testen / testdriven development.
+**Edwin** ook mogelijk cloud (GCP of AWS), microservices
  

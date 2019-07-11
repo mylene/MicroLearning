@@ -39,7 +39,7 @@ mvn package
 
 
 ```
-java -jar target/dateMan.jar
+java -jar target/databaseService.jar
 ```
 
 ## Exercise the application
