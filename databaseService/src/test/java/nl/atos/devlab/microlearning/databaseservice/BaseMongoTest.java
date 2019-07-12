@@ -15,9 +15,12 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 class BaseMongoTest {
 
@@ -44,21 +47,29 @@ class BaseMongoTest {
     }
 
     @AfterAll
-    static void teardown(){
+    static void teardown() {
         mongodProcess.stop();
         mongodExecutable.stop();
     }
 
     @Test
     void testPersistence() {
-        Document document = new Document("name", "Café Con Leche")
-                .append("contact", new Document("phone", "228-555-0149")
-                        .append("email", "cafeconleche@example.com")
-                        .append("location", Arrays.asList(-73.92502, 40.8279556)))
-                .append("stars", 3)
-                .append("categories", Arrays.asList("Bakery", "Coffee", "Pastries"));
 
+        Document websiteDocument1 = new Document("site", "https://coder-coder.com/how-to-make-simple-website-html/").append("shown", false).append("date found", LocalDateTime.now());
+        Document websiteDocument2 = new Document("site", "https://nl.wikipedia.org/wiki/Website").append("shown", false).append("date found", LocalDateTime.now());
+        List<Document> documents = new ArrayList<>();
+        documents.add(websiteDocument1);
+        documents.add(websiteDocument2);
+        Document document = new Document("keyword", "website")
+                .append("websites", documents);
         mongoCollection.insertOne(document);
-        assertEquals(document.get("name"), "Café Con Leche");
+        Document check = mongoCollection.find().first();
+        if (check != null) {
+            System.out.println(check.toJson());
+        } else {
+            fail("Document is null");
+        }
+        assertEquals(document.get("keyword"), "website");
+        assertEquals(1, mongoCollection.countDocuments());
     }
 }
