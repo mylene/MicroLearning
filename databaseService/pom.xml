@@ -39,6 +39,9 @@
         <exec.mainClass>${mainClass}</exec.mainClass>
         <libs.classpath.prefix>libs</libs.classpath.prefix>
         <copied.libs.dir>${project.build.directory}/${libs.classpath.prefix}</copied.libs.dir>
+        <!-- database Related -->
+        <mongo.version>3.10.2</mongo.version>
+        <flapdoodle.version>2.2.0</flapdoodle.version>
     </properties>
 
     <build>
@@ -237,6 +240,18 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- MongoDb -->
+            <dependency>
+                    <groupId>de.flapdoodle.embed</groupId>
+                    <artifactId>de.flapdoodle.embed.mongo</artifactId>
+                <version>${flapdoodle.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.mongodb</groupId>
+                <artifactId>mongo-java-driver</artifactId>
+                <version>${mongo.version}</version>
+            </dependency>
     </dependencies>
 
 </project>

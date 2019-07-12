@@ -1,6 +1,8 @@
 language: java
 jdk:
 - openjdk12
+services:
+  - mongodb
 sudo: false
 addons:
   sonarcloud:
@@ -12,3 +14,5 @@ script:
 notifications:
   slack:
     secure: x2G88vs0qHX4FKKbLectqr9WEIW0AnQ1Y8fU+ytUAc6/U36ISMxu53XRx1BF1IdQIbG0bNrOk3sLEYEvLCOoPVDTp3oRS4XrGn3luLBbbI1e+4rlrzL80GGsQmn03OIgJFlaVmn3/p1OS0d31tD52SjhVIhXul4paSieZVgRv4JtZa4X/f19TfYqn6Xw7SzPAUHh+wP4nfrHqAVUp7Nbs30gcDaYG0DF+hp4Y0s1NINpfcz05ePvTcwXdhjplow/vYL8ZPbmn7faYBvdgJDorNeaZhs1lIOXzVxiPwSNAUVBLKb7nCfdTEh8ZIHUAoXjtuQsDldS3STUBpr+cTfchww7NsajU6tW0Trw4b8T5witCIQkL9fTzwYQx1Pk87RpOR6QISPvZxrgkot2kBvx2rx0H9pHCAMBBMTyTgjROX2vhsGO+Vh+LO9nHvcjpVhUFRvsAOfOarbS08yznXQkyVLZNmcUpQMsdpy3+KE64Dkymzn/cpySUUc9IVa+0PgzR/3e3WxFYd67hwQWY/JRSaSvw4u4mX7/8SHAXE3NVOyPHOYURo9iwM1IXSp8FxTiWiDucbTquaCt0BtbrWXAGnXdSQuJVvz6BrbsuO5A6Tt0TgO/NnGp0/MNkOxVufaeWqtgyC14wWgPEWrxcDyXRwPRTB4lfpFSXAbrYCwBLJk=
+
+
