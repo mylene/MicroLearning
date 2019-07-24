@@ -24,11 +24,9 @@ Om via Google, zoekresultaten te bekomen, wijzig je de parameter {searchKey}.
 <p>
 Als resultaat krijg je de volgende gegevens in JSON-formaat terug:
 
-
-* title  
-* link  
-* snippet: enkele regels van de webpagina van de bijhorende link van het gevonden resultaat
-
+1. title  
+2. link  
+3. snippet: enkele regels van de webpagina van de bijhorende link van het gevonden resultaat
 
 ##### Beperking
 Er is geen betalingsplan bij Google afgesloten en dit betekend dat er maximaal 100 queries / maand uitgevoerd mogen worden.
