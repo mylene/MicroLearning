@@ -1,0 +1,10 @@
+kumuluzee:
+  server:
+    http:
+      port: 8081
+  cors-filter:
+    servlet:
+      allow-origin: "http://localhost"
+google:
+  api-key: "AIzaSyBadsvGQHn9Phiq5DpFJL6LHJXLlU4-TPA"
+  cx: "008125398743551491394:oivxlf5aewc"
