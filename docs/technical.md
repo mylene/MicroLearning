@@ -24,8 +24,8 @@ Om via Google, zoekresultaten te bekomen, wijzig je de parameter {searchKey}.
 <p>
 Als resultaat krijg je de volgende gegevens in JSON-formaat terug:
 
-* title
-* link
+* title  
+* link  
 * snippet: enkele regels van de webpagina van de bijhorende link van het gevonden resultaat
 
 ##### Beperking
