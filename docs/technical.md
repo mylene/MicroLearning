@@ -16,6 +16,12 @@ Om de microservice te starten, voeg je de volgende 'run' configuratie toe:
 1. Bij de optie 'Working directory' verwijs je naar de folder 'googleService'
 2. Bij de optie 'Command line' voeg je het volgende toe: clean package kumuluzee:run
 
+##### Commandline
+Om de microservice te starten, voer je het volgende uit:
+1. Navigeer naar de folder 'googleService' waar je pom.xml bestand aanwezig is
+2. Voer het volgende uit: mvn clean package
+3. Als laatste voer je het volgende uit: java -jar target/googleService-1.0-SNAPSHOT.jar
+
 De microservice is beschikbaar via volgende url: http://localhost:8081
 
 ##### Service
