@@ -1,0 +1,44 @@
+<div class="col-12" style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<div class="col-12 text-center">
+  <form>
+    <input type="text" [(ngModel)]='searchKey' [ngModelOptions]="{standalone: true}" placeholder="example: nature">
+    <button type="submit" (click)="SearchIn(searchKey)"><i class="fa fa-search"></i></button>
+    <br/>
+    <input type="checkbox" [(ngModel)]="search_Offline" [ngModelOptions]="{standalone: true}"/>Offline
+    <input type="checkbox" [(ngModel)]="search_Google" [ngModelOptions]="{standalone: true}"/>Google
+  </form>
+</div>
+
+<div class="col-12">
+  <div class="row">
+    <div class="col-12 text-center" *ngIf='offlineSearch !=""'><h3>Offline Zoekresultaten</h3></div>
+    <div class="card" *ngFor='let oS of offlineSearch'>
+      <div class="card-body">
+          <h5 class="card-title">{{oS.title}}</h5>
+          <p class="card-text">{{oS.snippet}}</p>
+        </div>
+        <div class="card-footer" *ngIf='oS.link'>
+            <span *ngIf='oS.link.includes("google.com/maps/")'><a [href]='oS.link' target="_blanc" class="btn btn-warning">Go to Google Maps</a></span>
+            <span *ngIf='oS.link.includes("google.com/earth/")'><a [href]='oS.link' target="_blanc" class="btn btn-success">View Google Earth article</a></span>
+            <span *ngIf='oS.link.includes("wikipedia")'><a [href]='oS.link' target="_blanc" class="btn btn-success">Wikipedia article</a></span>
+            <span *ngIf='!oS.link.includes("google.com/maps/")&&!oS.link.includes("google.com/earth/")&&!oS.link.includes("wikipedia")'><a [href]='oS.link' target="_blanc" class="btn btn-primary">View article</a></span>
+        </div>
+    </div>
+    <div class="col-12 text-center" *ngIf='googleSearch !=""'><h3>Google Zoekresultaten</h3></div>
+    <div class="card" *ngFor='let gS of googleSearch'>
+      <div class="card-body">
+          <h5 class="card-title">{{gS.title}}</h5>
+          <p class="card-text">{{gS.snippet}}</p>
+        </div>
+        <div class="card-footer text-right" *ngIf='gS.title != 404'>
+            <a [href]='gS.link' target="_blanc" class="btn btn-primary">View article</a>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Voor als er meerdere pagina's zijn / navigatie: -->
+<!-- <router-outlet></router-outlet> -->
